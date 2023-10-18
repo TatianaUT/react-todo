@@ -1,32 +1,17 @@
 import React from 'react';
-
-const todoList = [
-  {
-    id: 1,
-    title: 'Test 1'
-  },
-  {
-    id: 2,
-    title: 'Test 2'
-  },
-  {
-    id: 3,
-    title: 'Test 3'
-  }
-]
+import TodoList from './TodoList';
+import AddTodoForm from './AddTodoForm';
 
 function App() {
   return (
     <div>
-      <h1> Todo List </h1>
-      <ul>
-        {todoList.map(function(item) {
-          return <li key = {item.id}>
-            {item.title}
-            </li>;
-        })}      
-      </ul>
+      <header>
+        <h1> TodoList </h1>
+      </header>
+      <AddTodoForm />
+      <TodoList />
     </div>
   );
-}
+  }
 export default App;
+
